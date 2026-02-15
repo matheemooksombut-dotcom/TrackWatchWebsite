@@ -8,6 +8,6 @@
                 });
             }, { threshold: 0.2 });
 
-            const targets = document.querySelectorAll('.img-content3 img, .content-pic-1 img, .img-insidesportcontent-2 img');
+            const targets = document.querySelectorAll('.img-content3 img, .content-pic-1 img, .img-insidesportcontent-2 img, .img-product img ');
             targets.forEach(target => observer.observe(target));
         });
