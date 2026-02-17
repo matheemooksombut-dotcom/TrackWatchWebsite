@@ -85,6 +85,7 @@ body {
   /* เงาเรืองแสง */
   box-shadow: 0 0 15px rgba(168, 75, 255, 0.6);
   transition: all 0.3s ease;
+  
 }
 
 .buy-btn:hover {
@@ -304,7 +305,10 @@ body {
 .img-content3{
   padding-left: 600px;
 }
-
+a{
+  color: white;
+  text-decoration: none
+}
 
 
 .img-content3 img {
@@ -341,14 +345,11 @@ body {
 }
 a{
   text-decoration: none;
-  color: aliceblue;
+  
 }
 
 
-a:hover{
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-}
+
 
 .mainbuyitem-wrapper{
   background-color: rgb(34, 35, 35);
@@ -441,6 +442,7 @@ a:hover{
 
 .qty-box button:hover{
     background: #222;
+    
 }
 
 .qty-box input{
@@ -483,6 +485,34 @@ a:hover{
 .dot:hover::after {
     opacity: 1;
 }
+
+.btn-buy{
+   width: 200px;
+  height: 50px;
+   border-radius: 999px;
+  cursor: pointer;
+  /* ไล่สีม่วง */
+  background: linear-gradient(45deg, #7b2ff7, #a84bff);
+  /* เงาเรืองแสง */
+  box-shadow: 0 0 15px rgba(168, 75, 255, 0.6);
+  transition: all 0.3s ease;
+  color: white;
+  border: none;
+}
+
+.btn-buy:hover {
+  background: linear-gradient(45deg, #c1a9e7, #be8cec);
+  transform: scale(1.05);
+  color: black;
+  /* เพิ่มความเรืองแสง */
+  box-shadow: 0 0 20px rgba(168, 75, 255, 0.9), 0 0 40px rgba(168, 75, 255, 0.6);
+}
+
+.btn-buy:active {
+  transform: scale(0.97);
+}
+
+
 
 
 
