@@ -12,7 +12,7 @@
         <div class="nav-bar">
             <div class="logo"> <i style="font-size: larger" class="fa-solid fa-equals"></i> </div>
                 <div class="home"><a href="index.html"><i class="fa-solid fa-house"></i></a></div>
-                <div class="cart"><i style="font-size:larger ;" class="fa-solid fa-cart-arrow-down cart-icon"></i></div>
+                <a href="buyitem.html"><div class="cart"><i style="font-size:larger ;" class="fa-solid fa-cart-arrow-down"></i></div></a>
                 <div class="User"><i style="font-size: larger;" class="fa-solid fa-user user-icon"></i></div>
                 
         </div>
@@ -21,16 +21,16 @@
     <div class="main-register-wrapper">
         <div class="registersection-content">
             <form action="">
-                <input class="registerform" type="email" placeholder="Plese Enter Your Email">
+                <input class="registerform" name="Email_User" type="email" placeholder="Plese Enter Your Email">
                 <br>
                 <br>
-                <input class="registerform" type="text" placeholder="Plese Enter Your UserName">
+                <input class="registerform" name="Username" type="text" placeholder="Plese Enter Your UserName">
                 <br>
                 <br>
-                <input class="registerform" type="password" placeholder="Plese Enter Your Password">
+                <input class="registerform" name="Password" type="password" placeholder="Plese Enter Your Password">
                 <br>
                 <br>
-                   <input class="registerform" type="password" placeholder="Plese Confrime Your Password">
+                <input class="registerform" name="ConfrimePassword" type="password" placeholder="Plese Confrime Your Password">
                 <br>
                 <br>
                 <br>
@@ -43,7 +43,34 @@
     </div>
 
     
+    
+       <!-- OVERLAY Login -->
+                <div class="overlay"></div>
 
+                <!-- LOGIN UI -->
+                <div class="login-modal">
+                    <form id="loginForm">
+                        <span class="close" style="cursor: pointer; display: flex; justify-content: end;">✕</span>
+                        <h2 style="color: rgb(255, 255, 255);">Login</h2>
+                        <input name="Username"   type="text" placeholder="Username">
+                        <br>
+                        <br>
+                        <input name="Password" type="password" placeholder="Password">
+                        <br>
+                        <br>
+                        <button type="submit">Sign in</button>
+                        <p>OR</p>
+                        <button style="background-color: rgb(59, 89, 152); "> <i class="fa-brands fa-facebook" style="margin-right: 20px;"></i>Sign With Facebook</button>
+                        <br>
+                        <br>
+                        <button style="background-color: rgb(66, 133, 244);"><i class="fa-brands fa-google" style="margin-right: 20px;"></i>Sign With Google</button>
+                        <a href="Register.html"><p style="color: rgb(255, 255, 255);">Don't have an account? <span class="fontregis">Register Now</span></p></a>
+                    </form>
+                </div>
+          
     
 </body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="FrontScript.js"></script>
 </html>
