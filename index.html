@@ -15,10 +15,10 @@
     <div class="nav-barwrapper">
         <div class="nav-bar">
             <div class="logo"> <i style="font-size: larger" class="fa-solid fa-equals"></i> </div>
-                <div><a href="index.html"><i class="fa-solid fa-house"></i></a></div>
-                <div class="cart"><i style="font-size:larger ;" class="fa-solid fa-cart-arrow-down"></i></div>
-                <div class="User"><i style="font-size: larger;" class="fa-solid fa-user"></i></div>
-                <a href="buyitem.html"><butto style="margin-left: 200px; " class="buy-btn">ซื้อเลย</butto></a>
+                <div class="home"><a href="index.html"><i class="fa-solid fa-house"></i></a></div>
+                <div class="cart"><i style="font-size:larger ;" class="fa-solid fa-cart-arrow-down cart-icon"></i></div>
+                <div class="User"><i style="font-size: larger;" class="fa-solid fa-user user-icon"></i></div>
+                <butto onclick="window.location.href='buyitem.html';" style="margin-left: 200px;  " class="buy-btn">ซื้อเลย</butto>
         </div>
     </div>
     <div class="maincontnent-wrapper">
@@ -124,6 +124,29 @@
     </div>  
 
 
+       <!-- OVERLAY Login -->
+                <div class="overlay"></div>
+
+                <!-- LOGIN UI -->
+                <div class="login-modal">
+                    <form id="loginForm">
+                        <span class="close" style="cursor: pointer; display: flex; justify-content: end;">✕</span>
+                        <h2 style="color: rgb(255, 255, 255);">Login</h2>
+                        <input name="Username"   type="text" placeholder="Username">
+                        <br>
+                        <br>
+                        <input name="Password" type="password" placeholder="Password">
+                        <br>
+                        <br>
+                        <button type="submit">Sign in</button>
+                        <p>OR</p>
+                        <button style="background-color: rgb(59, 89, 152); "> <i class="fa-brands fa-facebook" style="margin-right: 20px;"></i>Sign With Facebook</button>
+                        <br>
+                        <br>
+                        <button style="background-color: rgb(66, 133, 244);"><i class="fa-brands fa-google" style="margin-right: 20px;"></i>Sign With Google</button>
+                        <a href="Register.html"><p style="color: rgb(255, 255, 255);">Don't have an account? <span class="fontregis">Register Now</span></p></a>
+                    </form>
+                </div>
           
   
    
