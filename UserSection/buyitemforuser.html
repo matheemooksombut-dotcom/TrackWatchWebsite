@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>TRACKWATCHWEBSITE</title>
 </head>
 <body>
@@ -12,8 +12,8 @@
             <div class="nav-bar">
                 <div class="logo"> <i style="font-size: larger" class="fa-solid fa-equals"></i> </div>
                 <div class="home"><a href="./index.html"><i class="fa-solid fa-house"></i></a></div>
-                <div class="cart"><i style="font-size:larger ;" class="fa-solid fa-cart-arrow-down  cart-icon"></i></div>
-                <div class="User"><i style="font-size: larger;" class="fa-solid fa-user user-icon"></i></div>    
+                <div class="cart"><a href="./buyitemforuser.html"><i style="font-size:larger ;" class="fa-solid fa-cart-arrow-down  cart-icon"></i></a></div>
+                <div class="User"><i style="font-size: larger; color: rgb(0, 255, 191);"  class="fa-solid fa-user user-logout"></i></div>   
                     <butto style="margin-left: 200px;" id="loginsection-btn-buy" class="buy-btn">ซื้อเลย</butto>
             </div>
         </div>
@@ -51,7 +51,7 @@
 
                     <br>
                     <br>
-                    <button class="btn-buy">Buy Now!</button>
+                    <button class="btn-userbuy">Buy Now!</button>
                 </div>
             </div>
         </div>
@@ -89,35 +89,26 @@
 
 
 
-     <!-- OVERLAY Login -->
+     <!-- OVERLAY Logout -->
                 <div class="overlay"></div>
-
-                <!-- LOGIN UI -->
-                <div class="login-modal">
-                    <form id="loginForm">
+            
+      <!-- OVERLAY Logout -->
+                <div class="overlay"></div>
+                <div class="logout-modal">
+                    <form id="logoutForm">
                         <span class="close" style="cursor: pointer; display: flex; justify-content: end;">✕</span>
-                        <h2 style="color: rgb(255, 255, 255);">Login</h2>
-                        <input name="Username"   type="text" placeholder="Username">
-                        <br>
-                        <br>
-                        <input name="Password" type="password" placeholder="Password">
-                        <br>
-                        <br>
-                        <button type="submit">Sign in</button>
-                        <p>OR</p>
-                        <button style="background-color: rgb(59, 89, 152); "> <i class="fa-brands fa-facebook" style="margin-right: 20px;"></i>Sign With Facebook</button>
-                        <br>
-                        <br>
-                        <button style="background-color: rgb(66, 133, 244);"><i class="fa-brands fa-google" style="margin-right: 20px;"></i>Sign With Google</button>
-                        <a href="Register.html"><p style="color: rgb(255, 255, 255);">Don't have an account? <span class="fontregis">Register Now</span></p></a>
+                        <h2 style="color: rgb(255, 255, 255);">Logout</h2>
+                       
+                        <button type="button" style="background-color: rgb(244, 102, 66);"><i class="fa-brands fa-google" style="margin-right: 20px;"></i>Logout</button>
+                      
                     </form>
                 </div>
-
+               
 
      
 </body>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="FrontScript.js"></script>
-<script src="script.js"></script>
+<script src="../script.js"></script>
 </html>

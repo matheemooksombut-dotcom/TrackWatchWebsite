@@ -14,11 +14,11 @@
 <body>
     <div class="nav-barwrapper">
         <div class="nav-bar">
-            <div class="logo"> <i style="font-size: larger" class="fa-solid fa-equals"></i> </div>
+            <div class="logo"> <i style="font-size: larger"  class="fa-solid fa-equals"></i> </div>
                 <div class="home"><a href="index.html"><i class="fa-solid fa-house"></i></a></div>
-                <div class="cart"><i style="font-size:larger ;" class="fa-solid fa-cart-arrow-down cart-icon"></i></div>
-                <div class="User"><i style="font-size: larger;" class="fa-solid fa-user user-icon"></i></div>
-                <butto onclick="window.location.href='buyitem.html';" style="margin-left: 200px;  " class="buy-btn">ซื้อเลย</butto>
+                <div class="cart"><a href="buyitemforuser.html"><i style="font-size:larger ; " class="fa-solid fa-cart-arrow-down "></i></a></div>
+                <div class="User"><i style="font-size: larger; color: rgb(0, 255, 191);"  class="fa-solid fa-user user-logout"></i></div>
+                <butto onclick="window.location.href='buyitemforuser.html';" style="margin-left: 200px;  " class="buy-btn">ซื้อเลย</butto>
         </div>
     </div>
     <div class="maincontnent-wrapper">
@@ -34,13 +34,13 @@
     </div>
     <div class="content-wrapper">
         <div class="sportcontent">
-            <div class="content-sport"> <img src="./Template/backgroudheadersec2.png" alt="">
+            <div class="content-sport"> <img src="/Template/backgroudheadersec2.png" alt="">
                 <div class="inside-contemtsport">
                     <div class="text-sportcontent">
                        
                             <div class="w1">
                                 <div class="w2">
-                                    <img src="./Template/iconelemntsport.png" alt="">
+                                    <img src="/Template/iconelemntsport.png" alt="">
                                 </div>
                             </div>
 
@@ -67,7 +67,7 @@
             <div class="info-content">
                 <div class="info-flex">
                     <div class="logo-info-contnet">
-                        <img src="./Template/iconelementmessage.png" alt="">
+                        <img src="/Template/iconelementmessage.png" alt="">
                     </div>
                     <div class="info-message">
                         <p>ระบบแจ้งเตือนข้อมูล</p>
@@ -85,12 +85,12 @@
         
         <div class="bg-content3">
             <div class="icon-content3">
-                <img src="./Template/lookicon.png" alt="">
+                <img src="/Template/lookicon.png" alt="">
             </div>
             <h2>เลือกแบบที่ใช่ตามสไตล์คุณ</h2>
             <p>นี่คือส่วนของเนื้อหา เพิ่มข้อความของคุณและแก้ไขได้ง่ายๆ ที่นี่ เพียงคลิก "แก้ไขข้อความ" หรือดับเบิลคลิก จากนั้นลงเนื้อหาของคุณ หรือแก้ไข หรือเปลี่ยนแบบฟอนต์ได้เลย</p>
             <div class="img-content3">
-                <img src="./Template/watchlooksection.png" alt="">
+                <img src="/Template/watchlooksection.png" alt="">
             </div>
             <br>
             <br>
@@ -124,33 +124,24 @@
     </div>  
 
 
-       <!-- OVERLAY Login -->
+       <!-- OVERLAY Logout -->
                 <div class="overlay"></div>
-
-                <!-- LOGIN UI -->
-                <div class="login-modal">
-                    <form id="loginForm">
+             <div class="logout-modal">
+                    <form id="logoutForm">
                         <span class="close" style="cursor: pointer; display: flex; justify-content: end;">✕</span>
-                        <h2 style="color: rgb(255, 255, 255);">Login</h2>
-                        <input name="Username"   type="text" placeholder="Username">
-                        <br>
-                        <br>
-                        <input name="Password" type="password" placeholder="Password">
-                        <br> 
-                        <br>
-                        <button type="submit">Sign in</button>
-                        <p>OR</p>
-                        <button style="background-color: rgb(59, 89, 152); "> <i class="fa-brands fa-facebook" style="margin-right: 20px;"></i>Sign With Facebook</button>
-                        <br>
-                        <br>
-                        <button style="background-color: rgb(66, 133, 244);"><i class="fa-brands fa-google" style="margin-right: 20px;"></i>Sign With Google</button>
-                        <a href="Register.html"><p style="color: rgb(255, 255, 255);">Don't have an account? <span class="fontregis">Register Now</span></p></a>
+                        <h2 style="color: rgb(255, 255, 255);">Logout</h2>
+                       
+                        <button onclick="window.location.href='../index.html'" type="button" style="background-color: rgb(244, 102, 66);"><i class="fa-brands fa-google" style="margin-right: 20px;"></i>Logout</button>
+                      
                     </form>
                 </div>
+              
           
   
    
 </body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="../script.js"></script>
     

@@ -1,4 +1,4 @@
-const { text } = require("body-parser")
+
 
 // Connecting Form
 document.addEventListener("DOMContentLoaded",()=>{
@@ -37,7 +37,7 @@ const submitRegister = async () =>{
      const strongPassword = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[^A-Za-z\d]).{6,}$/;
     const thaiPattern = /[\u0E00-\u0E7F]/;
 
-    if (thaiPattern.test(PasswordDom.value)) {
+    if (thaiPattern.test(PasswordUserDom.value)) {
         Swal.fire({
             title: 'Invalid Input',
             text: 'Password cannot contain Thai characters',
@@ -48,7 +48,7 @@ const submitRegister = async () =>{
 
 
 
-    if (PasswordDom.value !== ConfirmPasswordDom.value) {
+    if (PasswordUserDom.value !== ConfirmPasswordUserDom.value) {
             Swal.fire({
             title: 'Password Error',
             text: 'Password not match',
@@ -56,7 +56,7 @@ const submitRegister = async () =>{
         });
         return;
     }  
-    if (!strongPassword.test(PasswordDom.value)) {
+    if (!strongPassword.test(PasswordUserDom.value)) {
         Swal.fire({
         title: 'Password Error',
         text: ' Password must contain letters, numbers and at least 6 characters and Special characters',

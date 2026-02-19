@@ -19,11 +19,11 @@ const dots  = document.querySelectorAll('.dot')
 
 // Product Image
 const colorImage={
-    white: 'Template/whitewatch.png', 
-    black: 'Template/showcasewatch.png',
-    blue: 'Template/bluewatch.png',
-    purple: 'Template/purplewatch.png', 
-    green: 'Template/greenwatch.png'
+    white: '../Template/whitewatch.png', 
+    black: '../Template/showcasewatch.png',
+    blue: '../Template/bluewatch.png',
+    purple: '../Template/purplewatch.png', 
+    green: '../Template/greenwatch.png'
 }
 
 
@@ -33,6 +33,10 @@ dots.forEach(dot =>{
         changeimgProduct.src = colorImage[color]
     })
 })
+
+
+
+
 
 // ===== LOGIN =====
   const cartIcon = document.querySelector('.cart-icon');
