@@ -166,6 +166,46 @@ if(additems){
 }
 
 // SHOW CART (หน้า cart.html)
+const showcart = document.querySelector('.main-cart-content');
+
+if(showcart){
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    //  ลบขยะออก
+    cart = cart.filter(item => item.name && item.price && item.img);
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    showcart.innerHTML = ""; // กันซ้อน
+
+    cart.forEach(item => {
+        const div = document.createElement("div");
+
+        div.innerHTML = `
+        <center>
+                <img src="${item.img}" width="200" style="border-radius:20px;">
+                <h3>${item.name}</h3>
+                ${item.color ? `<p>Color : ${item.color}</p>` : ""}
+                <p>ราคา-ต่อชิ้น  : ${item.price.toFixed(2)}</p>
+                <p>จำนวน : ${item.qty}</p>
+                <br>
+                <p>ช่องทางการชำระเงิน</p>
+                <br>
+                <center> <div class="buyiconstyle"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-paypal"></i><i class="fa-brands fa-cc-amazon-pay"></i></div> </center>
+                <br>
+                <hr style="color: black;">
+                <br>
+              </center>
+
+        `
+        
+    })
+    
+    showcart.appendChild(div);
+
+
+    
+}
 
 
 
