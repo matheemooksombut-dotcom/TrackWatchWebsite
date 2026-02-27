@@ -11,6 +11,7 @@ body {
 }
 
 .nav-barwrapper {
+ 
   position: fixed;
   width: 100%;
   top: 30px;
@@ -370,9 +371,17 @@ a:hover{
   margin: 20px 0;
 }
 
-
+/* หน้า BuyItems ForUser */
 .mainbuyitem-wrapper{
   background-color: rgb(34, 35, 35);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+/* หน้า CartItems */
+.main-cart-content{
+   background-color: rgb(34, 35, 35);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

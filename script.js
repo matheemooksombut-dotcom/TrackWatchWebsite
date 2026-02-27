@@ -110,6 +110,63 @@ minusbtn.addEventListener('click', function(){
 })
 
 
+// Add Items to cart
+
+const additems = document.querySelector('#addtocart')
+
+
+if(additems){
+    additems.addEventListener('click', function(){
+    const qtyInput = document.querySelector('.qty');
+    
+    const product = {
+        name: additems.dataset.name , 
+        price: Number(additems.dataset.price) , 
+        img : selectedImg || additems.dataset.img , 
+        qty : Number(qtyInput ? qtyInput.value : 1) , 
+        color: hasColor ? selectedColor : null , 
+    
+    }
+
+
+    // check color
+    const colorDots = document.querySelectorAll('.dot');
+    const hasColor = colorDots.length > 0;
+
+    
+
+    // กันข้อมูลไม่ครบ
+    if(!product.name || !product.price || !product.img){
+        alert("Data invalid")
+        return ; 
+    }
+    if(hasColor && !product.color){
+        alert("Please select a color")
+        return ; 
+
+    }
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    //  รวมสินค้าที่ซํ้ากัน
+    const existingItem = cart.find(item => item.name === product.name && item.color === product.color);
+    
+    if (existingItem) {
+        existingItem.qty += product.qty;
+    } else {
+        cart.push(product);
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    window.location.href = '/UserSection/cart.html'
+    
+
+    })
+    
+}
+
+// SHOW CART (หน้า cart.html)
+
 
 
   
