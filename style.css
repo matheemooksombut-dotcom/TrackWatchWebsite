@@ -772,6 +772,14 @@ a:hover{
 }
 
 
+.buyiconstyle{
+   font-size: xx-large;
+   display:flex;
+   justify-content: center;
+   text-align: center;
+   column-gap: 100px;
+}
+
 .white { background: #ffffff; }
 .black { background: #000; }
 .brown { background: #6b4b2a; }
