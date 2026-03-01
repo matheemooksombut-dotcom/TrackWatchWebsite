@@ -26,7 +26,7 @@ const colorImage={
     green: '../Template/greenwatch.png'
 }
 
-
+// เปลี่ยนรูปตามสี
 dots.forEach(dot =>{
     dot.addEventListener('click', function(){
         const color = dot.dataset.color
@@ -108,7 +108,19 @@ minusbtn.addEventListener('click', function(){
     }
 
 })
+//  ประกาศตัวแปร รอเก็บค่า
+let selectedColor = null;
+let selectedImg = null;
 
+    dots.forEach(dot =>{
+        dot.addEventListener('click', function(){
+            const color = dot.dataset.color
+            changeimgProduct.src = colorImage[color]
+
+            selectedColor = color
+            selectedImg = colorImage[color]
+        })
+    })
 
 // Add Items to cart
 
@@ -118,7 +130,14 @@ const additems = document.querySelector('#addtocart')
 if(additems){
     additems.addEventListener('click', function(){
     const qtyInput = document.querySelector('.qty');
+
+
     
+    // check color
+    const colorDots = document.querySelectorAll('.dot');
+    const hasColor = colorDots.length > 0;
+    
+    // รับค่า Object Product
     const product = {
         name: additems.dataset.name , 
         price: Number(additems.dataset.price) , 
@@ -127,13 +146,6 @@ if(additems){
         color: hasColor ? selectedColor : null , 
     
     }
-
-
-    // check color
-    const colorDots = document.querySelectorAll('.dot');
-    const hasColor = colorDots.length > 0;
-
-    
 
     // กันข้อมูลไม่ครบ
     if(!product.name || !product.price || !product.img){
@@ -158,7 +170,7 @@ if(additems){
 
     localStorage.setItem('cart', JSON.stringify(cart));
 
-    window.location.href = '/UserSection/cart.html'
+    window.location.href = "/UserSection/cart.html";
     
 
     })
