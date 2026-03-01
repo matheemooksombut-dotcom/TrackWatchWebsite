@@ -94,7 +94,7 @@ const plusbtn =document.querySelector('.plus')
 const minusbtn =document.querySelector('.minus')
 const qty = document.querySelector('.qty')
 
-
+if(plusbtn && minusbtn && qty){
 plusbtn.addEventListener('click', function(){
     qty.value++
 
@@ -108,6 +108,7 @@ minusbtn.addEventListener('click', function(){
     }
 
 })
+}
 //  ประกาศตัวแปร รอเก็บค่า
 let selectedColor = null;
 let selectedImg = null;
@@ -211,9 +212,9 @@ if(showcart){
 
         `
         
+        showcart.appendChild(div);
     })
     
-    showcart.appendChild(div);
 
 
     
