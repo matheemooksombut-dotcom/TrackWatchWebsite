@@ -195,7 +195,7 @@ if(showcart){
                 <br>
                 <hr style="color: black;">
                 <br>
-              </center>
+        </center>
 
         `
         
